@@ -7,16 +7,23 @@ body {
 
 h1 {
     color: #6e309e; 
-    background-image: url("../images/gradient.png"); 
     background-repeat: repeat-x; 
     font-family: 'Proza Libre', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(191,223,188,1) 0%, rgba(122,222,94,1) 45%, rgba(64,170,37,1) 95%);
+    color: transparent;
+    background-clip: text; 
 }
 
 h2 {
     color: #6e309e; 
-    background-image: url("../images/gradient.png"); 
     background-repeat: repeat-x; 
     font-family: 'Proza Libre', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(191,223,188,1) 0%, rgba(122,222,94,1) 45%, rgba(64,170,37,1) 95%);
+    color: transparent;
 }
 
 a {
@@ -48,9 +55,30 @@ footer {
     font-size: 12px;
 }
 
-.links {list-style-type: none;}
+.links {
+    list-style-type: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0;
+}
 
-ul {list-style-type: square;}
+ul {
+    list-style-type: square;
+}
+
+.width-wrap {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2em 3em;
+    margin: 0 auto 3em auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: #ADD8E6;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+figure img {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
 
 
 

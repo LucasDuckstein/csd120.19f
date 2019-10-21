@@ -2,6 +2,7 @@
 
 body {
     background-color: #9ad89a; 
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -9,7 +10,6 @@ h1 {
     background-image: url("../images/gradient.png"); 
     background-repeat: repeat-x; 
     font-family: 'Proza Libre', sans-serif;
-    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -17,7 +17,6 @@ h2 {
     background-image: url("../images/gradient.png"); 
     background-repeat: repeat-x; 
     font-family: 'Proza Libre', sans-serif;
-    font-family: 'Open Sans', sans-serif;
 }
 
 a {

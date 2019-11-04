@@ -75,6 +75,7 @@ ul {
     padding: 0 2em 3em;
     margin: 0 auto 3em auto;
     border: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: none;
     background-color: #ADD8E6;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }

@@ -127,12 +127,15 @@ footer hr {
 }
 
 nav {
-    float: right;
     margin-left: 2em;
     margin-right: 2em;
     border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
     margin-top: -4px;
     overflow: auto;
+}
+
+nav ul {
+    float: right;
 }
 
 nav li {
@@ -160,4 +163,6 @@ nav a:hover {
 }
 
 .back-to-top a {
+    position: fixed;
+    bottom: 3.5em;
 }

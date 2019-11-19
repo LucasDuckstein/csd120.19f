@@ -70,7 +70,7 @@ footer {
 .links {
     list-style-type: none;
     margin: 0 0 0 0;
-    padding: 0 0 0;
+    padding: 0 0 0 0;
 }
 
 ul {
@@ -212,4 +212,70 @@ main {
 
 .col-span-2 {
     grid-column: span 2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px){
+    footer hr {
+        display: none;
+    }
+    .paperclip {
+        display:none;
+    }
+    .mugshot {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    main {
+        display: block;
+    }
+    .row-span-2.col-span-2 {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+    .links {
+        flex-direction: column;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    nav a {
+        border: none;
+    }
+    nav a:hover{
+        border: none;
+        text-decoration: underline;
+    }
+    .burger{
+        height: 25px;
+        cursor: pointer;
+        position: relative;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40px;
+        border-top: 5px solid rgba(190,0,222,1);
+    }
+    .burger::before {
+        top: 5px;
+        width: 40px;
+        border-top: 5px solid rgba(190,0,222,1);
+        content:"";
+        display: block;
+        position: absolute;
+        }
+    .burger::after {
+        top: 15px;
+        width: 40px;
+        border-top: 5px solid rgba(190,0,222,1);
+        content:"";
+        display: block;
+        position: absolute;
+        }
+
 }

@@ -14,6 +14,8 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CProza+Libre&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/baguetteBox.css">
+    <script src="styles/baguetteBox.js"></script>
 </head>
 
 <body>
@@ -21,7 +23,8 @@
     <div class="width-wrap">
     <header id="top">
         <nav>
-        <div class="burger"></div>
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger"></label>
             <ul class="links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="links.html">Links</a></li>
@@ -29,7 +32,7 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <section class="bio">
             <h1>Welcome to Lucas' CSD120 Website!</h1>
@@ -43,7 +46,7 @@
             <p>Hello my name is Lucas and I am a student of Sault College.  I am in my first year of the computer programming program.  I am on the Sault College hockey team and I also play soccer and golf for fun during the summer.</p>
             <p>When I'm not playing sports I like to play videogames.  My favourite videogame is Rocket League and I play it professionally.</p>
         </section>
-        
+
         <section class="favourite">
             <h2>My Three Favourite Sports</h2>
             <ol>
@@ -52,7 +55,7 @@
                 <li>Golf</li>
             </ol>
         </section>
-        
+
         <section>
             <h2>Haiku</h2>
             <p>
@@ -65,7 +68,7 @@
                 </span>
             </p>
         </section>
-        
+
         <section>
             <h2>My Sault College Courses</h2>
             <table>
@@ -96,9 +99,9 @@
                     <td>Technology in Society</td>
                 </tr>
                 <tr>
-                    <th rowspan="5" style="border-top: 3px solid #ADD8E6;">Winter</th>
-                    <td style="border-top: 3px solid #ADD8E6";>CSA 103</td>
-                    <td style="border-top: 3px solid #ADD8E6";>Business Applications I</td>
+                    <th rowspan="5" style="border-top: 3px solid #ADD8E6">Winter</th>
+                    <td style="border-top: 3px solid #ADD8E6">CSA 103</td>
+                    <td style="border-top: 3px solid #ADD8E6">Business Applications I</td>
                 </tr>
                 <tr>
                     <td>CSD102</td>
@@ -118,7 +121,7 @@
                 </tr>
             </table>
         </section>
-        
+
         <section class="gallery">
             <h2>Photo Gallery</h2>
             <div class="gallery-thumbnails">
@@ -169,30 +172,21 @@
                 </a>
             </div>
         </section>
-        
+
         <section class="survey">
             <h2>Survey</h2>
-                <form>
-                    What is your name?
-                    <br><br>
-                    <input type="text" name="name_field">
-                    <br><br>
-                    What is your email?
-                    <br><br>
-                    <input type="text" name="email_field">
-                    <br><br>
-                    Which integer is best?
-                    <br><br>
-                    <input type="number" name="best_integer">
-                    <br><br>
-                    Which day is best?
-                    <br><br>
-                    <input type="date" name="best_day">
-                    <br><br>
-                    Which is the best bear?
-                    <br><br>
-                    <select name="best_bear">
-                        <option value=""></option>
+                <form action="https://formspree.io/mledzbyb" method="POST">
+                    <label for="name">What is your name?</label>
+                    <input type="text" name="name_field" id="name">
+                    <label for="email">What is your email?</label>
+                    <input type="text" name="email_field" id="email">
+                    <label for="integer">Which integer is best?</label>
+                    <input type="number" name="best_integer" id="integer">
+                    <label for="day">Which day is best?</label>
+                    <input type="date" name="best_day" id="day">
+                    <label for="bear">Which is the best bear?</label>
+                    <select name="best_bear" id="bear">
+                        <option label=" "></option>
                         <option value="Black">Black</option>
                         <option value="Brown">Brown</option>
                         <option value="Care">Care</option>
@@ -200,14 +194,18 @@
                         <option value="Polar">Polar</option>
                         <option value="Teddy">Teddy</option>
                     </select>
-                    <br><br>
-                    Do you like radio buttons?
-                    <br><br>
+                    <label>Do you like radio buttons?</label>
+                    <label><input type="radio" name="radio_buttons" value="yes">Yes</label>
+                    <label><input type="radio" name="radio_buttons" value="no">No</label>
+                    <label><input type="radio" name="radio_buttons" checked value="?">None of your business</label>
+                    <label for="life">What is the meaning of life?</label>
+                    <textarea name="life_meaning" rows="10" placeholder="Enter the correct answer here" id="life"></textarea>
+                    <input type="submit" id="send" value="SEND">
                 </form>
         </section>
-        
+
         </main>
-    
+
     <footer>
         <hr>
         <blockquote>"You can do anything, but not everything" <br><span class="byline"><em>&mdash;David Allen</em></span></blockquote>
@@ -216,11 +214,18 @@
     </footer>
     <div class="back-to-top">
         <a href="#top">
-           ◤ 
+           ◤
         </a>
     </div>
    </div>
-   
+
+<script>
+    baguetteBox.run('.gallery-thumbnails', {
+    filter: /picsum\.photos\/id/i
+});
+
+</script>
+
 </body>
 
 </html>
